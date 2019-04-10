@@ -22,19 +22,17 @@ public class LoginServlet extends HttpServlet {
 		String name = request.getParameter("name");
 		String password = request.getParameter("password");
 		String pwd = userDAO.md5(password);
-		
-		User user = userReturn(name, pwd);
-		request.getSession().setAttribute("user", user);
 		login(request, response, name, pwd);
 	}
 
 	private void login(HttpServletRequest request, HttpServletResponse response, String name, String pwd)
 			throws IOException, ServletException {
-		if (checkUser(name, pwd) == true) {
-			request.getSession().setAttribute("name", name);
+		if (checkUser(name, pwd)) {
+			User user = userReturn(name, pwd);
+		        request.getSession().setAttribute("user", user);
 			response.sendRedirect("admin/home.jsp");
 		} else {
-			request.setAttribute("erro", "Usuario ou senha inv·lidos");
+			request.setAttribute("erro", "Usuario ou senha inv√°lidos");
 			request.getRequestDispatcher("index.jsp").forward(request, response);
 		}
 	}
