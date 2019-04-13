@@ -1,0 +1,328 @@
+/* ====================== RESET ====================== */
+
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-size: 100%;
+    outline: none;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+
+body {
+    /* background-color: #eee; */
+    background-color: rgb(41, 64, 90);
+}
+
+a {
+    text-decoration: none;
+}
+
+.height-100 {
+    height: 100%;
+}
+
+/* ====================== CONTAINERS ====================== */
+.container {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 3% 4%;
+}
+
+.container-main {
+    width: 100%;
+    float: left;
+    text-align: center;
+    padding: 3% 4%;
+}
+
+.container-header {
+    width: 100%;
+    float: left;
+    text-align: center;
+}
+
+.container-logo-menu {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo a {
+    font-size: 2em;
+    color: black;
+}
+
+.menu-mobile {
+   margin-right: 2%; 
+}
+
+/* ====================== HEADER ====================== */
+
+header {
+    border-bottom: 2px solid white;
+    background-color: rgb(63, 102, 146);
+    height: 55px;
+}
+
+.btn-menu {
+    background-color: transparent;
+    cursor: pointer;
+    text-align: center;
+    font-size: 33px;
+    color: white;
+}
+
+/* ====================== MENU ====================== */
+
+.menu {
+    display: none;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.9);
+    top: 0;
+    left: 0;
+}
+
+.menu ul {
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    height: 30%;
+}
+
+.btn-close {
+    font-size: 27px;
+    background-color: transparent;
+    color: white;
+    float: right;
+    cursor: pointer;
+    margin: 2% 3% 0 0;
+}
+
+.btn-close:hover {
+    color: rgb(63, 102, 146);
+}
+
+.menu li {
+    padding: 1.5%;
+}
+
+.menu li a {
+    font-size: 1.5em;
+    color: white;
+    padding: 1.5% 3%;
+}
+
+.menu li a:hover{
+    color: rgb(63, 102, 146);
+}
+
+.perfil img {
+    height: 150px;
+    border-radius: 150px;
+}
+
+.perfil h2{
+    color: white;
+    font-size: 1.5em;
+    font-weight: 700;
+}
+
+.perfil h3 {
+    color: white;
+}
+
+.social-icons-position {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icons {
+    height: 10%;
+}
+
+.social-icons a{
+    font-size: 1.7em;
+    color: white;
+    margin-right: 6%;
+}
+
+.social-icons a:hover {
+    color: rgb(63, 102, 146);
+}
+
+.social-icons a:last-child {
+    margin-right: 0;
+}
+/* ====================== TELA DE MENU MOBILE ====================== */
+
+.btn {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.mobile-menu {
+    width: 100%;
+    height: 100%;
+}
+
+.perfil-container {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 50%;
+}
+/*  ====================== SERVICES  ====================== */
+
+.service {
+    text-align: left;
+    width: 100%;
+    border-radius: 7px;
+    background-color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 3%;
+}
+
+.service ul {
+    list-style: none;
+}
+
+.inner {
+    padding: 7%; 
+    border-radius: 7px;
+    background-color: #eee;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+.title-main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+}
+
+.icon {
+    width: 30%;
+    font-size: 3em;
+    margin: 2% 0 2% 6%;
+}
+
+.title {
+    width: 70%;
+}
+
+.title h3 {
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.inner {
+    font-size: 1.1em;
+    color: #000;
+    line-height: 1.5em;
+}
+
+/* ====================== MEDIA TYPES====================== */
+
+@media screen and (min-width: 370px) {
+    .menu ul {
+        font-size: 1.3em;
+    }
+
+    .perfil img {
+        height: 200px;
+        border-radius: 200px;
+    }
+
+    .social-icons {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 620px) {
+
+    .btn-menu {
+       font-size: 37px;
+    }
+
+
+/* ====================== TELA DE MENU MOBILE ====================== */    
+    .social-icons a {
+        font-size: 2.3em;
+    }
+
+    .menu li a {
+        font-size: 1.8em;
+    }
+    
+    .perfil img {
+        height: 200px;
+        border-radius: 200px;
+    }
+    
+    .perfil h2{
+        color: white;
+        font-size: 2em;
+        font-weight: 700;
+    }
+    
+    .perfil h3 {
+        color: white;
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    .service {
+        width: 48%;
+        float: left;
+        margin-right: 2%;
+    }
+
+    .inner {
+        font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1000px)  {
+    .inner {
+        font-size: 1.3em;
+    }
+
+    .title h3 {
+        font-size: 1.7em;
+    }
+    
+    .menu ul {
+        height: 35%;
+    }    
+}
+
+@media screen and (min-width: 1240px) {
+    .perfil-container {
+        height: 43%;
+    }
+
+    .menu ul {
+        height: 37%;
+    }
+}
+
+   
+
