@@ -1,6 +1,8 @@
 package br.ucsal.bes.model;
 
 public class User {
+	private static Integer counter = 0;
+	private Integer id;
 	private String login;
 	private String password;
 	private String email;
@@ -21,8 +23,18 @@ public class User {
 		this.password = password;
 		this.email = email;
 		this.name = name;
+		counter++;
+		setId(counter);
 	}
 
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+	
 	public String getLogin() {
 		return login;
 	}

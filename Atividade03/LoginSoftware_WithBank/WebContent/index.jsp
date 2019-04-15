@@ -6,13 +6,28 @@
 <head>
 <meta charset="ISO-8859-1">
 <title>Login</title>
+<link rel="stylesheet" type="text/css" media="screen" href="main.css" />
 </head>
 <body>
-	<form method="post" action="LoginServlet">
-		Nome: <input type="text" name="name" placeholder="Informe o nome"/> 
-		Senha: <input type="password" name="password" placeholder="Informe a senha"/>
-		<button type="submit">Entrar</button>
-	</form>
-	<c:out value="${erro}"/>
+	<div class="container">	
+		<div class="container-register">
+			<form method="post" action="LoginServlet">
+				<div class="title">
+					<h1>Login</h1>
+				</div>
+				<div class="container-input">
+                    Nome: <input type="text" name="name" placeholder="Informe o nome" />
+                </div>
+                <div class="container-input">
+                    Senha: <input type="text" name="password" placeholder="Informe a senha" />
+                </div>
+				<div class="container-input">
+                    <button type="submit" name="enter">Enviar</button>
+                </div>
+			</form>
+			<c:out value="${erro}"/>
+			<a href="register.jsp">Ainda não possui uma conta ? Cadastre-se</a>
+		</div>
+	</div>
 </body>
 </html>
